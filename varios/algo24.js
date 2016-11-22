@@ -1,0 +1,1 @@
+openvpn --dev tun1 --ifconfig 10.9.8.1 10.9.8.2 --tls-server --dh /etc/openvpn/keys/dh2048.pem --ca /etc/openvpn/keys/ca.crt --cert /etc/openvpn/keys/joinlabs.com.ar.crt --key /etc/openvpn/keys/joinlabs.com.ar.key --reneg-sec 60 --verb 5

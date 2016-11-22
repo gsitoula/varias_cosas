@@ -1,0 +1,62 @@
+<section class="panel panel-default">
+
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Tarifas/Comisiones Acordadas</strong></div>
+
+        <div class="panel-body">
+            <form name="form_constraints" class="form-validation" novalidate data-ng-submit="submitForm()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for=""> Tarifa por puesto/hora fijo</label>
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        data-ng-model="form.puesto_hora"
+                                >
+                                <span></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label for=""> Comisión</label>
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        data-ng-model="form.comision"
+                                >
+                                <span></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label for=""> Cantidad Hs Presenciales</label>
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        data-ng-model="form.hs_presenciales"
+                                >
+                                <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="">VPH</label>
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        data-ng-model="form.vph"
+                                >
+                                <span></span>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Indice Multiplicador</label>
+                                <input  type="text"
+                                        class="form-control"
+                                        required
+                                        data-ng-model="form.indice_mult"
+                                >
+                                <span></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+</section>

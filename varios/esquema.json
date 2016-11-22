@@ -1,0 +1,13 @@
+{
+    "_id": ObjectID("582f1aafd06f537ee1758ee5"),
+    "name": "test_campana",
+    "esquema_de_datos": {
+        "0": "nombre",
+        "1": "apellido",
+        "2": "edad",
+        "3": "dni",
+        "4": "direccion",
+        "5": "telefono",
+        "6": "email"
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" class="form-control" required ng-model="form.propiedad">
+	<span class="input-group-btn">
+		<button class="btn btn-default" type="button" ng-click="buscarPropiedad(form.propiedad)">Buscar</button>
+	</span>
+</div>
+<input type="text" class="form-control" required data-ng-model="form.inquilino">
+<span class="input-group-btn">
+	<button class="btn btn-default" type="button">Buscar</button>
+</span>
+<input type="text" class="form-control" required data-ng-model="form.garante">
+<span class="input-group-btn">
+	<button class="btn btn-default" type="button">Buscar</button>
+</span> 
+<script type="text/javascript">
+	$scope.buscarPropiedad = function(propiedad){
+        console.log(propiedad);
+
+        $http({
+            method: 'GET',
+            url: url_service + "/getData/",
+            params: {
+                collection: 'propiedades',
+                id: null
+            }
+        })
+        .then(function (response) {
+                //console.log(response.data.body);
+                response.data.body.forEach(function(currentValue) {
+                    if(currentValue.DIRECCION == propiedad){
+                        $scope.propiedadCompleta = currentValue;
+                        $scope.form.propietario = currentValue.PROPIETARIO;
+                    }
+                });
+            });
+
+    };
+	
+</script>
+
+</body>
+</html>
